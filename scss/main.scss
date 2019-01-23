@@ -1,5 +1,72 @@
-$primary-color: #444;
+@import "config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
   background: $primary-color;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $secondary-color;
+  overflow-x: hidden;
 }
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.landing {
+  display: flex;
+  height: 100vh;
+}
+
+.fullScreenVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullScreenVideo video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: auto;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.skills {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  background: #eee;
+  padding: 3rem 6rem;
+  text-align: center;
+}
+
+@import "menu";
+@import "responsive";
