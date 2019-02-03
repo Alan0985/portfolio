@@ -3,46 +3,129 @@
   height: 100vh;
   position: relative;
   background: #eee;
-  padding: 1rem 2rem;
   text-align: center;
+}
 
-  .pulse {
-    width: 300px;
-    height: 300px;
-    opacity: 1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include easeOut;
+#skills .title {
+  width: 100%;
+  height: 15vh;
+  display: table;
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
-.skill {
+#skills .logos {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills .firstRow,
+#skills .secondRow,
+#skills .thirdRow {
+  width: 100%;
+  height: 33%;
+  max-height: 220px;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.2);
+}
+
+.firstRow .skill {
+  align-self: flex-end;
+}
+.secondRow .skill {
+  align-self: center;
+}
+.thirdRow .skill {
+  align-self: flex-start;
+}
+
+#skills .popUp {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#skills img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 50%;
+}
+
+.skill {
   transform: scale(0.2);
   opacity: 0;
   @include easeOut;
 
-  &.popUp {
-    transform: scale(1);
-    opacity: 1;
+  &.xs {
+    width: 80px;
+    height: 80px;
   }
-
-  &#jsSkill {
-    width: 200px;
-    height: 200px;
-    background: url("../img/jd.jpg") center center;
-  }
-
-  &#reactSkill {
+  &.sm {
     width: 100px;
     height: 100px;
-    background: url("../img/jd.jpg") center center;
   }
-  &#htmlSkill {
-    width: 300px;
-    height: 300px;
-    background: url("../img/jd.jpg") center center;
+
+  &.md {
+    width: 140px;
+    height: 140px;
+  }
+
+  &.lg {
+    width: 180px;
+    height: 180px;
+  }
+
+  &.xl {
+    width: 200px;
+    height: 200px;
+  }
+
+  &#ajaxSkill img {
+    border: 1px solid #1983c6;
+  }
+  &#bootstrapSkill img {
+    border: 1px solid #713cbe;
+  }
+  &#cssSkill img {
+    border: 1px solid #1b73ba;
+  }
+  &#htmlSkill img {
+    border: 1px solid #e54d26;
+  }
+
+  &#jsonSkill img {
+    border: 1px solid #7249fb;
+  }
+  &#sassSkill img {
+    border: 1px solid #cd6799;
+  }
+
+  &#expressSkill img {
+    border: 1px solid #6f6f6f;
+  }
+
+  &#mongoSkill img {
+    border: 1px solid #439945;
+  }
+
+  &#reduxSkill img {
+    border: 1px solid #764abc;
+  }
+
+  &#awsSkill img {
+    border: 1px solid #ff9900;
+  }
+  &#gitSkill img {
+    border: 1px solid #f05133;
+  }
+
+  &#pwaSkill img {
+    border: 1px solid #5a0fc8;
   }
 }

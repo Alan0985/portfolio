@@ -18,6 +18,7 @@ body {
 
 h1 {
   font-size: 50px;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -62,4 +63,7 @@ a {
 @import "menu";
 @import "skills";
 @import "works";
+@import "education";
+@import "experience";
+@import "contact";
 @import "responsive";

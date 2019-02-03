@@ -1,15 +1,67 @@
-//Wide Screens
-@include mediaXL {
+@include portrait {
+  // Landing
+  .fullScreenVideo video {
+    width: auto;
+    height: 100vh;
+    transform: translate(-40%, -50%);
+  }
+
+  //Skills
+  #skills .logosWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  #skills .firstRow,
+  #skills .secondRow,
+  #skills .thirdRow {
+    width: 33%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 100%;
+    flex-direction: column;
+  }
+
+  //Works
+  #works .title {
+    height: 10vh;
+  }
+
+  #works .works {
+    min-height: 90vh;
+  }
+
+  #works .work {
+    width: 60vw;
+    align-self: center;
+  }
 }
 
 //Desktop and Laptops
 @include mediaLG {
-  .fullScreenVideo video {
-    // For Portrait
-    width: auto;
-    height: 100vh;
+  //Skills
+  .skill.xs {
+    width: 65px;
+    height: 65px;
+  }
+  .skill.sm {
+    width: 85px;
+    height: 85px;
+  }
 
-    transform: translate(-40%, -50%);
+  .skill.md {
+    width: 115px;
+    height: 115px;
+  }
+
+  .skill.lg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skill.xl {
+    width: 165px;
+    height: 165px;
   }
 }
 
@@ -26,10 +78,22 @@
     height: 53vh;
     flex-flow: row wrap;
   }
+
+  #skills .title {
+    display: none;
+  }
+
+  #skills .logos {
+    height: 100vh;
+  }
 }
 
 //Smartphones
 @include mediaSM {
+  h1 {
+    font-size: 24px;
+  }
+
   .menu-avatar {
     height: 35vh;
   }
@@ -43,5 +107,36 @@
   }
   .nav-link {
     font-size: 25px !important;
+  }
+
+  .skill.xs {
+    width: 40px;
+    height: 40px;
+  }
+  .skill.sm {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill.md {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill.lg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill.xl {
+    width: 120px;
+    height: 120px;
+  }
+
+  #works .title {
+    height: 70px;
+  }
+  #works .work {
+    width: 80vw;
   }
 }

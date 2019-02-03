@@ -124,18 +124,80 @@ $(document).ready(function() {
     let distance = $("#skills").offset().top - $(window).scrollTop();
 
     if (distance >= min && distance <= max) {
-      setTimeout(function() {
-        $("#jsSkill").addClass("popUp");
-      }, 300);
-      setTimeout(function() {
-        $("#reactSkill").addClass("popUp");
-      }, 400);
+      $(".firstRow").addClass("popUp");
+      $(".secondRow").addClass("popUp");
+      $(".thirdRow").addClass("popUp");
+
       setTimeout(function() {
         $("#htmlSkill").addClass("popUp");
+        $("#jsSkill").addClass("popUp");
+        $("#pwaSkill").addClass("popUp");
       }, 500);
+
+      setTimeout(function() {
+        $("#cssSkill").addClass("popUp");
+        $("#nodeSkill").addClass("popUp");
+        $("#psSkill").addClass("popUp");
+        $("#jquerySkill").addClass("popUp");
+        $("#reactSkill").addClass("popUp");
+        $("#swSkill").addClass("popUp");
+      }, 650);
+
+      setTimeout(function() {
+        $("#bootstrapSkill").addClass("popUp");
+        $("#expressSkill").addClass("popUp");
+        $("#awsSkill").addClass("popUp");
+        $("#jsonSkill").addClass("popUp");
+        $("#reduxSkill").addClass("popUp");
+        $("#manifestSkill").addClass("popUp");
+      }, 800);
+
+      setTimeout(function() {
+        $("#webpackSkill").addClass("popUp");
+        $("#ajaxSkill").addClass("popUp");
+        $("#sassSkill").addClass("popUp");
+        $("#mongoSkill").addClass("popUp");
+        $("#graphqlSkill").addClass("popUp");
+        $("#gitSkill").addClass("popUp");
+        $("#wordpressSkill").addClass("popUp");
+        $("#githubSkill").addClass("popUp");
+      }, 950);
     } else {
       $(".skill").each(function() {
         $(this).removeClass("popUp");
+      });
+    }
+  });
+});
+
+//Works Section
+$(document).ready(function() {
+  $(window).scroll(function() {
+    const max = $(window).height() * 0.3;
+    const min = max - $(window).height();
+    let distance = $("#works").offset().top - $(window).scrollTop();
+
+    if (distance >= min && distance <= max) {
+      $(".works").addClass("slideUp");
+
+      setTimeout(function() {
+        $("#workOne").addClass("slideUp");
+      }, 500);
+
+      setTimeout(function() {
+        $("#workTwo").addClass("slideUp");
+      }, 650);
+
+      setTimeout(function() {
+        $("#workThree").addClass("slideUp");
+      }, 800);
+
+      setTimeout(function() {
+        $("#workFour").addClass("slideUp");
+      }, 950);
+    } else {
+      $(".work").each(function() {
+        $(this).removeClass("slideUp");
       });
     }
   });

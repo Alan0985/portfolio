@@ -5,19 +5,13 @@ $secondary-color: #225470;
   transition: all 0.5s ease-in-out;
 }
 
-@mixin zoom {
+@mixin easeFast {
   transition: all 0.3s ease-in-out;
 }
 
 //Media Query Mixins
-@mixin mediaSM {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-@mixin mediaMD {
-  @media screen and (max-width: 768px) {
+@mixin mediaXL {
+  @media screen and (min-width: 1025px) {
     @content;
   }
 }
@@ -28,8 +22,20 @@ $secondary-color: #225470;
   }
 }
 
-@mixin mediaXL {
-  @media screen and (min-width: 1025px) {
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media screen and (orientation: portrait) {
     @content;
   }
 }
