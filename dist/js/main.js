@@ -1,6 +1,8 @@
 const burgerBtn = document.querySelector(".burger-btn");
 const circleBG = document.querySelector(".circleBG");
 const menu = document.querySelector(".menu");
+const menuAvatar = document.querySelector(".menu-avatar");
+const menuNav = document.querySelector(".menu-nav");
 const avatar = document.querySelector(".avatar");
 
 let showMenu = false;
@@ -44,6 +46,8 @@ function toggleMenu() {
   if (!showMenu) {
     burgerBtn.classList.add("close");
     menu.classList.add("show");
+    menuAvatar.classList.add("show");
+    menuNav.classList.add("show");
     circleBG.setAttribute("style", "width: 500vw; height: 500vw;");
 
     setTimeout(function() {
@@ -109,6 +113,9 @@ function toggleMenu() {
     setTimeout(function() {
       burgerBtn.classList.remove("close");
       menu.classList.remove("show");
+      menuAvatar.classList.remove("show");
+      menuNav.classList.remove("show");
+
       circleBG.setAttribute("style", "width: 1px; height: 1px;");
     }, 300);
 
@@ -200,5 +207,26 @@ $(document).ready(function() {
         $(this).removeClass("slideUp");
       });
     }
+  });
+
+  $(".work").each(function() {
+    $(this).hover(
+      function() {
+        $(this)
+          .find(".workOverlay")
+          .addClass("showWorkOverlay");
+        $(this)
+          .find(".workDetail")
+          .addClass("showWorkDetail");
+      },
+      function() {
+        $(this)
+          .find(".workOverlay")
+          .removeClass("showWorkOverlay");
+        $(this)
+          .find(".workDetail")
+          .removeClass("showWorkDetail");
+      }
+    );
   });
 });
