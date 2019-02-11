@@ -328,8 +328,76 @@ a {
   min-height: 100vh;
   position: relative;
   background: #eee;
-  padding: 1rem 1rem;
   text-align: center; }
+
+#edu .title {
+  width: 100%;
+  height: 12vh;
+  display: table; }
+  #edu .title h1 {
+    display: table-cell;
+    vertical-align: middle; }
+
+#edu .educations {
+  min-height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#edu .education {
+  width: 40vw;
+  margin: 5px 5px;
+  opacity: 0;
+  transform: translateY(15vh);
+  transition: all 0.3s ease-in-out; }
+
+#edu .slideIn {
+  transform: translateY(0);
+  opacity: 1; }
+
+#edu img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%; }
+
+#edu .eduOverlay {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #f26122;
+  top: 0;
+  left: 0;
+  transform: translateY(-30vh);
+  opacity: 0;
+  transition: all 0.5s ease-in-out; }
+
+#edu .showEduOverlay {
+  display: block;
+  transform: translateY(0);
+  opacity: 0.85; }
+
+#edu .eduDetail {
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%); }
+  #edu .eduDetail p {
+    margin: 15px auto;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out; }
+    #edu .eduDetail p.eduName {
+      font-size: 30px;
+      font-weight: 400; }
+
+#edu p.showEduDetail {
+  opacity: 1;
+  transform: translateY(0); }
 
 #exp {
   width: 100vw;
@@ -371,7 +439,14 @@ a {
     min-height: 90vh; }
   #works .work {
     width: 60vw;
-    align-self: center; } }
+    align-self: center; }
+  #edu .title {
+    height: 8vh; }
+  #edu .educations {
+    flex-direction: column;
+    min-height: 92vh; }
+  #edu .education {
+    width: 60vw; } }
 
 @media screen and (max-width: 1024px) {
   .skill.xs {
@@ -412,6 +487,9 @@ a {
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 24px; }
+  .burger-btn {
+    top: 20px;
+    right: 20px; }
   .menu-avatar {
     height: 35vh; }
   .menu-nav {
@@ -440,4 +518,16 @@ a {
   #works .work {
     width: 80vw; }
     #works .work h1 {
-      font-size: 20px; } }
+      font-size: 20px; }
+  #edu .title {
+    height: 8vh; }
+  #edu .educations {
+    min-height: 92vh; }
+  #edu .education {
+    width: 78vw;
+    margin: 1px 1px; }
+  #edu .eduDetail p {
+    margin: 3px auto;
+    font-size: 15px; }
+    #edu .eduDetail p.eduName {
+      font-size: 18px; } }

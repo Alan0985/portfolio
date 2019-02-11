@@ -229,4 +229,47 @@ $(document).ready(function() {
       }
     );
   });
+
+  //Education Section
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      const max = $(window).height() * 0.3;
+      const min = max - $(window).height();
+      let distance = $("#edu").offset().top - $(window).scrollTop();
+
+      if (distance >= min && distance <= max) {
+        $(".educations").addClass("slideIn");
+
+        setTimeout(function() {
+          $("#nmit").addClass("slideIn");
+          $("#qtu").addClass("slideIn");
+        }, 500);
+
+        setTimeout(function() {
+          $(".eduOverlay").addClass("showEduOverlay");
+        }, 1000);
+
+        setTimeout(function() {
+          $(".eduTime").addClass("showEduDetail");
+        }, 1300);
+        setTimeout(function() {
+          $(".eduName").addClass("showEduDetail");
+        }, 1500);
+        setTimeout(function() {
+          $(".eduDegree").addClass("showEduDetail");
+        }, 1700);
+        setTimeout(function() {
+          $(".eduPlace").addClass("showEduDetail");
+        }, 1900);
+      } else {
+        $("#nmit").removeClass("slideIn");
+        $("#qtu").removeClass("slideIn");
+        $(".eduOverlay").removeClass("showEduOverlay");
+        $(".eduTime").removeClass("showEduDetail");
+        $(".eduName").removeClass("showEduDetail");
+        $(".eduDegree").removeClass("showEduDetail");
+        $(".eduPlace").removeClass("showEduDetail");
+      }
+    });
+  });
 });

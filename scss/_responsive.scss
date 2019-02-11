@@ -35,6 +35,20 @@
     width: 60vw;
     align-self: center;
   }
+
+  //Education
+  #edu .title {
+    height: 8vh;
+  }
+
+  #edu .educations {
+    flex-direction: column;
+    min-height: 92vh;
+  }
+
+  #edu .education {
+    width: 60vw;
+  }
 }
 
 //Desktop and Laptops
@@ -104,6 +118,11 @@
     font-size: 24px;
   }
 
+  .burger-btn {
+    top: 20px;
+    right: 20px;
+  }
+
   .menu-avatar {
     height: 35vh;
   }
@@ -150,6 +169,27 @@
     width: 80vw;
     h1 {
       font-size: 20px;
+    }
+  }
+
+  #edu .title {
+    height: 8vh;
+  }
+
+  #edu .educations {
+    min-height: 92vh;
+  }
+
+  #edu .education {
+    width: 78vw;
+    margin: 1px 1px;
+  }
+
+  #edu .eduDetail p {
+    margin: 3px auto;
+    font-size: 15px;
+    &.eduName {
+      font-size: 18px;
     }
   }
 }
