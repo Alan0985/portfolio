@@ -24,7 +24,7 @@
   width: 1px;
   height: 1px;
   border-radius: 50%;
-  background-color: #225470;
+  background-color: $primary-color;
   overflow: hidden;
   opacity: 0.8;
   @include easeOut;
@@ -85,7 +85,7 @@
     &:hover {
       background-color: rgba(255, 255, 255, 0.7);
       & > a {
-        color: $secondary-color;
+        color: $primary-color;
       }
     }
   }

@@ -7,7 +7,7 @@ body {
   height: 100%;
   line-height: 1.5;
   margin: 0;
-  background: #444;
+  background: #225470;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #225470;
   overflow-x: hidden; }
@@ -290,7 +290,7 @@ a {
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  background-color: #f26122;
+  background-color: #336e7b;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -299,7 +299,7 @@ a {
 
 #works .showWorkOverlay {
   display: block;
-  opacity: 0.7;
+  opacity: 0.8;
   width: 100%;
   height: 100%;
   border-radius: 10px; }
@@ -366,7 +366,7 @@ a {
   z-index: 100;
   width: 100%;
   height: 100%;
-  background-color: #f26122;
+  background-color: #336e7b;
   top: 0;
   left: 0;
   transform: translateY(-30vh);
@@ -405,8 +405,97 @@ a {
   min-height: 100vh;
   position: relative;
   background: #ddd;
-  padding: 1rem 1rem;
   text-align: center; }
+
+.expBG {
+  display: none; }
+
+#exp .title {
+  width: 100%;
+  height: 12vh;
+  display: table; }
+  #exp .title h1 {
+    display: table-cell;
+    vertical-align: middle; }
+
+#exp .experiences {
+  min-height: 88vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease-in-out; }
+
+#exp .expWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.experience {
+  width: 40vw;
+  height: 42vh;
+  color: #fff;
+  margin: 0 5px 10px 5px;
+  border-radius: 15px;
+  transform: translateX(-50vw);
+  opacity: 0;
+  transition: all 0.7s ease-in-out; }
+
+.companyName {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(60vw);
+  opacity: 0;
+  transition: all 0.7s ease-in-out; }
+  .companyName h1 {
+    font-size: 28px; }
+
+.expDetail {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(60vw);
+  opacity: 0;
+  transition: all 0.7s ease-in-out; }
+  .expDetail .jobDescription {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 400; }
+
+.workTime,
+.jobLocation,
+.jobTitle,
+.jobDetail {
+  padding: 0 5px; }
+
+.expBottom {
+  display: none;
+  opacity: 0;
+  transition: all 0.7s ease-in-out; }
+
+#exp .slideIn {
+  transform: translateX(0);
+  opacity: 1; }
+
+#ogk {
+  background-color: #675589; }
+
+#yiyang {
+  background-color: #e38677; }
+
+#awf {
+  background-color: #468d8f; }
+
+#ec {
+  background-color: #e8ae6f; }
 
 #contact {
   width: 100vw;
@@ -414,7 +503,6 @@ a {
   min-height: 100vh;
   position: relative;
   background: #eee;
-  padding: 1rem 1rem;
   text-align: center; }
 
 @media screen and (orientation: portrait) {
@@ -466,7 +554,9 @@ a {
     height: 165px; }
   #works .work {
     width: 60vw;
-    align-self: center; } }
+    align-self: center; }
+  #exp .experience .companyName h1 {
+    font-size: 24px; } }
 
 @media screen and (max-width: 768px) {
   .menu {
@@ -482,7 +572,16 @@ a {
   #skills .logos {
     height: 100vh; }
   #works .work h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  #exp .title {
+    height: 8vh; }
+  #exp .experiences {
+    min-height: 92vh; }
+  #exp .experience {
+    width: 68vw;
+    height: 22vh;
+    align-self: center;
+    margin: 3px 0; } }
 
 @media screen and (max-width: 500px) {
   h1 {
@@ -490,6 +589,9 @@ a {
   .burger-btn {
     top: 20px;
     right: 20px; }
+  .circleBG {
+    top: 36px;
+    right: 35px; }
   .menu-avatar {
     height: 35vh; }
   .menu-nav {
@@ -516,7 +618,8 @@ a {
   #works .title {
     height: 70px; }
   #works .work {
-    width: 80vw; }
+    width: 80vw;
+    margin: 1px 1px; }
     #works .work h1 {
       font-size: 20px; }
   #edu .title {
@@ -530,4 +633,109 @@ a {
     margin: 3px auto;
     font-size: 15px; }
     #edu .eduDetail p.eduName {
-      font-size: 18px; } }
+      font-size: 18px; }
+  #exp .title {
+    height: 8vh; }
+  #exp .experiences {
+    min-height: 92vh; }
+  #exp .experience {
+    width: 80vw; }
+  #exp .experience .companyName {
+    height: 30%; }
+    #exp .experience .companyName h1 {
+      font-size: 16px; }
+  #exp .experience .expDetail {
+    height: 40%; }
+  .jobLocation,
+  .jobDescription,
+  .jobDetail {
+    display: none; }
+  #exp .experience .expBottom {
+    height: 30%;
+    display: flex;
+    justify-content: center; }
+    #exp .experience .expBottom .circleWrapper {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      z-index: 120; }
+    #exp .experience .expBottom .circleLG {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      align-self: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      animation: pulse 1.5s infinite; }
+  @keyframes pulse {
+    0% {
+      opacity: 1; }
+    100% {
+      transform: scale(3);
+      opacity: 0; } }
+    #exp .experience .expBottom .circleSM {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      align-self: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6); }
+  .expModal .expBG {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    color: #fff;
+    z-index: 150;
+    opacity: 0;
+    transition: all 0.7s ease-in-out; }
+    .expModal .expBG.ogkBG {
+      background-color: #675589; }
+    .expModal .expBG.yiyangBG {
+      background-color: #e38677; }
+    .expModal .expBG.awfBG {
+      background-color: #468d8f; }
+    .expModal .expBG.ecBG {
+      background-color: #e8ae6f; }
+    .expModal .expBG .modalCompanyName {
+      height: 10%;
+      width: 90%;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #fff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(10vh);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+      .expModal .expBG .modalCompanyName h1 {
+        font-size: 20px; }
+    .expModal .expBG .modalExpDetail {
+      height: 80%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(10vh);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+      .expModal .expBG .modalExpDetail .modalJobDescription {
+        font-size: 24px;
+        margin-top: 10px;
+        font-weight: 400; }
+      .expModal .expBG .modalExpDetail p {
+        text-align: left;
+        line-height: 40px; }
+    .expModal .expBG .showModalText {
+      transform: translateY(0);
+      opacity: 1; } }

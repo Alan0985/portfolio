@@ -82,6 +82,10 @@
     width: 60vw;
     align-self: center;
   }
+
+  #exp .experience .companyName h1 {
+    font-size: 24px;
+  }
 }
 
 //Tablets and Small Laptops
@@ -110,6 +114,21 @@
   #works .work h1 {
     font-size: 30px;
   }
+
+  #exp .title {
+    height: 8vh;
+  }
+
+  #exp .experiences {
+    min-height: 92vh;
+  }
+
+  #exp .experience {
+    width: 68vw;
+    height: 22vh;
+    align-self: center;
+    margin: 3px 0;
+  }
 }
 
 //Smartphones
@@ -121,6 +140,11 @@
   .burger-btn {
     top: 20px;
     right: 20px;
+  }
+
+  .circleBG {
+    top: 36px;
+    right: 35px;
   }
 
   .menu-avatar {
@@ -167,6 +191,8 @@
   }
   #works .work {
     width: 80vw;
+    margin: 1px 1px;
+
     h1 {
       font-size: 20px;
     }
@@ -190,6 +216,155 @@
     font-size: 15px;
     &.eduName {
       font-size: 18px;
+    }
+  }
+
+  #exp .title {
+    height: 8vh;
+  }
+
+  #exp .experiences {
+    min-height: 92vh;
+  }
+
+  #exp .experience {
+    width: 80vw;
+  }
+
+  #exp .experience .companyName {
+    height: 30%;
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  #exp .experience .expDetail {
+    height: 40%;
+  }
+  .jobLocation,
+  .jobDescription,
+  .jobDetail {
+    display: none;
+  }
+
+  #exp .experience .expBottom {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+
+    .circleWrapper {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      z-index: 120;
+    }
+
+    .circleLG {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      align-self: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    .circleSM {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      align-self: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .expModal .expBG {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    color: #fff;
+    z-index: 150;
+    opacity: 0;
+    @include easeSlow;
+
+    &.ogkBG {
+      background-color: #675589;
+    }
+
+    &.yiyangBG {
+      background-color: #e38677;
+    }
+
+    &.awfBG {
+      background-color: #468d8f;
+    }
+    &.ecBG {
+      background-color: #e8ae6f;
+    }
+
+    .modalCompanyName {
+      height: 10%;
+      width: 90%;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #fff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(10vh);
+      opacity: 0;
+      @include easeOut;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .modalExpDetail {
+      height: 80%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(10vh);
+      opacity: 0;
+      @include easeOut;
+
+      .modalJobDescription {
+        font-size: 24px;
+        margin-top: 10px;
+        font-weight: 400;
+      }
+      p {
+        text-align: left;
+        line-height: 40px;
+      }
+    }
+
+    .showModalText {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

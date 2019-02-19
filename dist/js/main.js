@@ -5,9 +5,6 @@ const menuAvatar = document.querySelector(".menu-avatar");
 const menuNav = document.querySelector(".menu-nav");
 const avatar = document.querySelector(".avatar");
 
-let showMenu = false;
-burgerBtn.addEventListener("click", toggleMenu);
-
 //Scroll to different sections
 $(document).ready(function() {
   $(".nav-item").click(function() {
@@ -32,7 +29,11 @@ $(document).ready(function() {
   });
 });
 
+let showMenu = false;
+burgerBtn.addEventListener("click", toggleMenu);
+
 //Toggle the menu button
+const body = document.querySelector("body");
 const navHome = document.querySelector("#navHome");
 const navSkills = document.querySelector("#navSkills");
 const navWorks = document.querySelector("#navWorks");
@@ -229,47 +230,189 @@ $(document).ready(function() {
       }
     );
   });
+});
 
-  //Education Section
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      const max = $(window).height() * 0.3;
-      const min = max - $(window).height();
-      let distance = $("#edu").offset().top - $(window).scrollTop();
+//Education Section
+$(document).ready(function() {
+  $(window).scroll(function() {
+    const max = $(window).height() * 0.3;
+    const min = max - $(window).height();
+    let distance = $("#edu").offset().top - $(window).scrollTop();
 
-      if (distance >= min && distance <= max) {
-        $(".educations").addClass("slideIn");
+    if (distance >= min && distance <= max) {
+      $(".educations").addClass("slideIn");
 
-        setTimeout(function() {
-          $("#nmit").addClass("slideIn");
-          $("#qtu").addClass("slideIn");
-        }, 500);
+      setTimeout(function() {
+        $("#nmit").addClass("slideIn");
+        $("#qtu").addClass("slideIn");
+      }, 500);
 
-        setTimeout(function() {
-          $(".eduOverlay").addClass("showEduOverlay");
-        }, 1000);
+      setTimeout(function() {
+        $(".eduOverlay").addClass("showEduOverlay");
+      }, 1000);
 
-        setTimeout(function() {
-          $(".eduTime").addClass("showEduDetail");
-        }, 1300);
-        setTimeout(function() {
-          $(".eduName").addClass("showEduDetail");
-        }, 1500);
-        setTimeout(function() {
-          $(".eduDegree").addClass("showEduDetail");
-        }, 1700);
-        setTimeout(function() {
-          $(".eduPlace").addClass("showEduDetail");
-        }, 1900);
-      } else {
-        $("#nmit").removeClass("slideIn");
-        $("#qtu").removeClass("slideIn");
-        $(".eduOverlay").removeClass("showEduOverlay");
-        $(".eduTime").removeClass("showEduDetail");
-        $(".eduName").removeClass("showEduDetail");
-        $(".eduDegree").removeClass("showEduDetail");
-        $(".eduPlace").removeClass("showEduDetail");
-      }
+      setTimeout(function() {
+        $(".eduTime").addClass("showEduDetail");
+      }, 1300);
+      setTimeout(function() {
+        $(".eduName").addClass("showEduDetail");
+      }, 1500);
+      setTimeout(function() {
+        $(".eduDegree").addClass("showEduDetail");
+      }, 1700);
+      setTimeout(function() {
+        $(".eduPlace").addClass("showEduDetail");
+      }, 1900);
+    } else {
+      $("#nmit").removeClass("slideIn");
+      $("#qtu").removeClass("slideIn");
+      $(".eduOverlay").removeClass("showEduOverlay");
+      $(".eduTime").removeClass("showEduDetail");
+      $(".eduName").removeClass("showEduDetail");
+      $(".eduDegree").removeClass("showEduDetail");
+      $(".eduPlace").removeClass("showEduDetail");
+    }
+  });
+});
+
+//Experience Section
+$(document).ready(function() {
+  $(window).scroll(function() {
+    const max = $(window).height() * 0.3;
+    const min = max - $(window).height();
+    let distance = $("#exp").offset().top - $(window).scrollTop();
+
+    if (distance >= min && distance <= max) {
+      $(".experiences").addClass("slideIn");
+
+      setTimeout(function() {
+        $("#ogk").addClass("slideIn");
+        $("#ogk")
+          .find(".companyName")
+          .addClass("slideIn");
+        $("#ogk")
+          .find(".expDetail")
+          .addClass("slideIn");
+      }, 500);
+
+      setTimeout(function() {
+        $("#yiyang").addClass("slideIn");
+        $("#yiyang")
+          .find(".companyName")
+          .addClass("slideIn");
+        $("#yiyang")
+          .find(".expDetail")
+          .addClass("slideIn");
+      }, 650);
+
+      setTimeout(function() {
+        $("#awf").addClass("slideIn");
+        $("#awf")
+          .find(".companyName")
+          .addClass("slideIn");
+        $("#awf")
+          .find(".expDetail")
+          .addClass("slideIn");
+      }, 800);
+
+      setTimeout(function() {
+        $("#ec").addClass("slideIn");
+        $("#ec")
+          .find(".companyName")
+          .addClass("slideIn");
+        $("#ec")
+          .find(".expDetail")
+          .addClass("slideIn");
+      }, 950);
+
+      setTimeout(function() {
+        $(".expBottom").addClass("slideIn");
+      }, 1100);
+    } else {
+      $(".experience").each(function() {
+        $(this).removeClass("slideIn");
+        $(".companyName").removeClass("slideIn");
+        $(".expDetail").removeClass("slideIn");
+        $(".expBottom").removeClass("slideIn");
+      });
+    }
+  });
+
+  //expModal
+  $(".ogkCircle").click(function() {
+    $(".ogkBG").css("width", "100vw");
+    $(".ogkBG").css("opacity", "1");
+    $("body").css("overflow-y", "hidden");
+
+    setTimeout(function() {
+      $(".ogkBG").css("height", "100vh");
+    }, 650);
+
+    setTimeout(function() {
+      $(".modalCompanyName").addClass("showModalText");
+      $(".modalExpDetail").addClass("showModalText");
+    }, 1200);
+  });
+
+  $(".yiyangCircle").click(function() {
+    $(".yiyangBG").css("width", "100vw");
+    $(".yiyangBG").css("opacity", "1");
+    $("body").css("overflow-y", "hidden");
+
+    setTimeout(function() {
+      $(".yiyangBG").css("height", "100vh");
+    }, 650);
+
+    setTimeout(function() {
+      $(".modalCompanyName").addClass("showModalText");
+      $(".modalExpDetail").addClass("showModalText");
+    }, 1200);
+  });
+
+  $(".awfCircle").click(function() {
+    $(".awfBG").css("width", "100vw");
+    $(".awfBG").css("opacity", "1");
+    $("body").css("overflow-y", "hidden");
+
+    setTimeout(function() {
+      $(".awfBG").css("height", "100vh");
+    }, 650);
+
+    setTimeout(function() {
+      $(".modalCompanyName").addClass("showModalText");
+      $(".modalExpDetail").addClass("showModalText");
+    }, 1200);
+  });
+
+  $(".ecCircle").click(function() {
+    $(".ecBG").css("width", "100vw");
+    $(".ecBG").css("opacity", "1");
+    $("body").css("overflow-y", "hidden");
+
+    setTimeout(function() {
+      $(".ecBG").css("height", "100vh");
+    }, 650);
+
+    setTimeout(function() {
+      $(".modalCompanyName").addClass("showModalText");
+      $(".modalExpDetail").addClass("showModalText");
+    }, 1200);
+  });
+
+  $(".expBG").each(function() {
+    $(this).click(function() {
+      $(".modalCompanyName").removeClass("showModalText");
+      $(".modalExpDetail").removeClass("showModalText");
+
+      setTimeout(function() {
+        $(".expBG").css("width", "2px");
+      }, 500);
+
+      setTimeout(function() {
+        $(".expBG").css("opacity", "0");
+        $(".expBG").css("height", "2px");
+        $("body").css("overflow-y", "auto");
+      }, 1150);
     });
   });
 });
