@@ -1,8 +1,75 @@
 #contact {
   width: 100vw;
-  height: 100%;
-  min-height: 100vh;
+  height: 16vh;
   position: relative;
   background: #eee;
   text-align: center;
+}
+
+.socialMedia {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 40px;
+    color: $primary-color;
+  }
+}
+
+.media {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  @include easeOut;
+}
+
+.mediaLogo {
+  height: 56px;
+  min-width: 56px;
+  border-radius: 28px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(2px);
+  @include easeOut;
+}
+
+.mediaText {
+  width: 80%;
+  font-size: 20px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50%);
+  @include easeFast;
+}
+
+.expand {
+  width: 300px;
+  justify-content: left;
+}
+
+.showMediaText {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copyright {
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: $primary-color;
 }
