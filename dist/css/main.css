@@ -676,6 +676,8 @@ a {
     margin: 1px 1px; }
     #works .work h1 {
       font-size: 20px; }
+    #works .work p {
+      font-size: 12px; }
   #edu .title {
     height: 8vh; }
   #edu .educations {
