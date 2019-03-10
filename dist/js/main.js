@@ -7,25 +7,15 @@ const avatar = document.querySelector(".avatar");
 
 //Scroll to different sections
 $(document).ready(function() {
-  $(".nav-item").click(function() {
+  $(".nav-item a").click(function() {
     toggleMenu();
 
-    let page_id = $(this)
-      .children("a")
-      .attr("href");
-
-    $("section").each(function() {
-      let section_id = $(this).attr("id");
-
-      if (page_id == "#" + section_id) {
-        $("html, body").animate(
-          {
-            scrollTop: $(this).offset().top
-          },
-          500
-        );
-      }
-    });
+    $("html, body").animate(
+      {
+        scrollTop: $(this.hash).offset().top
+      },
+      500
+    );
   });
 });
 
@@ -402,7 +392,7 @@ $(document).ready(function() {
       $(".modalExpDetail").removeClass("showModalText");
 
       setTimeout(function() {
-        $(".expBG").css("width", "2px");
+        $(".expBG").css("width", "3px");
       }, 500);
 
       setTimeout(function() {
