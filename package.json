@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Portfolio Website for Alan Wang",
   "main": "index.js",
+  "homepage": "https://github.com/Alan0985/portfolio",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   },
   "devDependencies": {},
