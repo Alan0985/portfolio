@@ -49,6 +49,15 @@
   #edu .education {
     width: 60vw;
   }
+
+  #exp .expWrapper {
+    flex-direction: column;
+  }
+
+  #exp .experience {
+    width: 70vw;
+    height: 40vh;
+  }
 }
 
 //Desktop and Laptops
@@ -225,7 +234,7 @@
 
   #exp .experience {
     width: 80vw;
-    height: 22vh;
+    height: 40vh;
     align-self: center;
     margin: 3px 0;
   }
@@ -309,14 +318,7 @@
     }
 
     &.yiyangBG {
-      background-color: #e38677;
-    }
-
-    &.awfBG {
       background-color: #468d8f;
-    }
-    &.ecBG {
-      background-color: #e8ae6f;
     }
 
     .modalCompanyName {
