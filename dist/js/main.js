@@ -135,11 +135,11 @@ $(document).ready(function() {
 
       setTimeout(function() {
         $("#cssSkill").addClass("popUp");
-        $("#nodeSkill").addClass("popUp");
+        $("#rnSkill").addClass("popUp");
         $("#psSkill").addClass("popUp");
         $("#jquerySkill").addClass("popUp");
         $("#reactSkill").addClass("popUp");
-        $("#swSkill").addClass("popUp");
+        $("#phpSkill").addClass("popUp");
       }, 650);
 
       setTimeout(function() {
@@ -148,7 +148,7 @@ $(document).ready(function() {
         $("#awsSkill").addClass("popUp");
         $("#jsonSkill").addClass("popUp");
         $("#reduxSkill").addClass("popUp");
-        $("#manifestSkill").addClass("popUp");
+        $("#mysqlSkill").addClass("popUp");
       }, 800);
 
       setTimeout(function() {
@@ -156,7 +156,7 @@ $(document).ready(function() {
         $("#ajaxSkill").addClass("popUp");
         $("#sassSkill").addClass("popUp");
         $("#mongoSkill").addClass("popUp");
-        $("#graphqlSkill").addClass("popUp");
+        $("#nodeSkill").addClass("popUp");
         $("#gitSkill").addClass("popUp");
         $("#wordpressSkill").addClass("popUp");
         $("#githubSkill").addClass("popUp");
