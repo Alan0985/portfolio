@@ -221,8 +221,6 @@ a {
     border: 1px solid #1b73ba; }
   .skill#htmlSkill img {
     border: 1px solid #e54d26; }
-  .skill#jsonSkill img {
-    border: 1px solid #7249fb; }
   .skill#sassSkill img {
     border: 1px solid #cd6799; }
   .skill#expressSkill img {
@@ -414,14 +412,14 @@ a {
 
 #exp .title {
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   display: table; }
   #exp .title h1 {
     display: table-cell;
     vertical-align: middle; }
 
 #exp .experiences {
-  min-height: 80vh;
+  min-height: 90vh;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -435,16 +433,15 @@ a {
 
 .experience {
   width: 38vw;
-  height: 70vh;
+  height: 27vh;
   color: #fff;
   margin: 0 5px 10px 5px;
   border-radius: 15px;
-  transform: translateX(-50vw);
+  transform: translateY(20vh);
   opacity: 0;
   transition: all 0.7s ease-in-out; }
 
 .companyName {
-  height: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,32 +449,37 @@ a {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(60vw);
-  opacity: 0;
   transition: all 0.7s ease-in-out; }
   .companyName h1 {
-    font-size: 28px; }
+    font-size: 25px;
+    margin: 5px 0; }
+
+.jobDescription {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 400;
+  border-bottom: 2px solid #fff; }
 
 .expDetail {
-  height: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  transform: translateX(60vw);
-  opacity: 0;
+  padding: 0 10px;
   transition: all 0.7s ease-in-out; }
-  .expDetail .jobDescription {
-    font-size: 20px;
-    margin-top: 2px;
-    font-weight: 400;
-    border-bottom: 2px solid #fff; }
+  .expDetail p {
+    text-align: left; }
 
-.workTime,
-.jobLocation,
-.jobTitle,
-.jobDetail {
-  padding: 0 5px; }
+.titleLocationTime {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.titleLocationTime > li {
+  display: inline-block; }
 
 .expBottom {
   display: none;
@@ -485,14 +487,16 @@ a {
   transition: all 0.7s ease-in-out; }
 
 #exp .slideIn {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1; }
 
-#ogk {
-  background-color: #675589; }
-
+#vfh,
+#uber,
+#eastern,
+#awf,
+#pack,
 #yiyang {
-  background-color: #468d8f; }
+  background-color: #225470; }
 
 #contact {
   width: 100vw;
@@ -697,18 +701,20 @@ a {
     min-height: 92vh; }
   #exp .experience {
     width: 80vw;
-    height: 40vh;
+    height: 30vh;
     align-self: center;
     margin: 3px 0; }
+  #exp .experience .titleLocationTime {
+    flex-direction: column; }
   #exp .experience .companyName {
     height: 30%; }
     #exp .experience .companyName h1 {
-      font-size: 16px; }
-  #exp .experience .expDetail {
+      font-size: 16px;
+      margin: 0 5px; }
+  #exp .experience .titleLocationTime {
     height: 40%; }
-  .jobLocation,
-  .jobDescription,
-  .jobDetail {
+  #exp .experience .expDetail,
+  #exp .experience .jobDescription {
     display: none; }
   #exp .experience .expBottom {
     height: 30%;

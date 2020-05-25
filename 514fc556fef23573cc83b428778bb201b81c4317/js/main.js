@@ -6,13 +6,13 @@ const menuNav = document.querySelector(".menu-nav");
 const avatar = document.querySelector(".avatar");
 
 //Scroll to different sections
-$(document).ready(function() {
-  $(".nav-item a").click(function() {
+$(document).ready(function () {
+  $(".nav-item a").click(function () {
     toggleMenu();
 
     $("html, body").animate(
       {
-        scrollTop: $(this.hash).offset().top
+        scrollTop: $(this.hash).offset().top,
       },
       500
     );
@@ -41,24 +41,24 @@ function toggleMenu() {
     menuNav.classList.add("show");
     circleBG.setAttribute("style", "width: 500vw; height: 500vw;");
 
-    setTimeout(function() {
+    setTimeout(function () {
       avatar.setAttribute("style", "width: 50vw; height: 50vw; opacity: 1;");
 
       navHome.classList.add("scale");
 
-      setTimeout(function() {
+      setTimeout(function () {
         navSkills.classList.add("scale");
       }, 50);
 
-      setTimeout(function() {
+      setTimeout(function () {
         navWorks.classList.add("scale");
       }, 100);
 
-      setTimeout(function() {
+      setTimeout(function () {
         navEdu.classList.add("scale");
       }, 150);
 
-      setTimeout(function() {
+      setTimeout(function () {
         navExp.classList.add("scale");
       }, 200);
 
@@ -66,7 +66,7 @@ function toggleMenu() {
       //   gallery.classList.add("scale");
       // }, 250);
 
-      setTimeout(function() {
+      setTimeout(function () {
         navContact.classList.add("scale");
       }, 250);
     }, 200);
@@ -77,32 +77,32 @@ function toggleMenu() {
 
     // navContact.classList.remove("scale");
 
-    setTimeout(function() {
+    setTimeout(function () {
       // gallery.classList.remove("scale");
       navContact.classList.remove("scale");
     }, 50);
 
-    setTimeout(function() {
+    setTimeout(function () {
       navExp.classList.remove("scale");
     }, 100);
 
-    setTimeout(function() {
+    setTimeout(function () {
       navEdu.classList.remove("scale");
     }, 150);
 
-    setTimeout(function() {
+    setTimeout(function () {
       navWorks.classList.remove("scale");
     }, 200);
 
-    setTimeout(function() {
+    setTimeout(function () {
       navSkills.classList.remove("scale");
     }, 250);
 
-    setTimeout(function() {
+    setTimeout(function () {
       navHome.classList.remove("scale");
     }, 300);
 
-    setTimeout(function() {
+    setTimeout(function () {
       burgerBtn.classList.remove("close");
       menu.classList.remove("show");
       menuAvatar.classList.remove("show");
@@ -116,8 +116,8 @@ function toggleMenu() {
 }
 
 //Skills Section
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     const max = $(window).height() * 0.3;
     const min = max - $(window).height();
     let distance = $("#skills").offset().top - $(window).scrollTop();
@@ -127,31 +127,31 @@ $(document).ready(function() {
       $(".secondRow").addClass("popUp");
       $(".thirdRow").addClass("popUp");
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#htmlSkill").addClass("popUp");
         $("#jsSkill").addClass("popUp");
         $("#pwaSkill").addClass("popUp");
       }, 500);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#cssSkill").addClass("popUp");
         $("#rnSkill").addClass("popUp");
         $("#psSkill").addClass("popUp");
-        $("#jquerySkill").addClass("popUp");
+        $("#muiSkill").addClass("popUp");
         $("#reactSkill").addClass("popUp");
         $("#phpSkill").addClass("popUp");
       }, 650);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#bootstrapSkill").addClass("popUp");
         $("#expressSkill").addClass("popUp");
         $("#awsSkill").addClass("popUp");
-        $("#jsonSkill").addClass("popUp");
+        $("#jquerySkill").addClass("popUp");
         $("#reduxSkill").addClass("popUp");
         $("#mysqlSkill").addClass("popUp");
       }, 800);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#webpackSkill").addClass("popUp");
         $("#ajaxSkill").addClass("popUp");
         $("#sassSkill").addClass("popUp");
@@ -162,7 +162,7 @@ $(document).ready(function() {
         $("#githubSkill").addClass("popUp");
       }, 950);
     } else {
-      $(".skill").each(function() {
+      $(".skill").each(function () {
         $(this).removeClass("popUp");
       });
     }
@@ -170,8 +170,8 @@ $(document).ready(function() {
 });
 
 //Works Section
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     const max = $(window).height() * 0.3;
     const min = max - $(window).height();
     let distance = $("#works").offset().top - $(window).scrollTop();
@@ -179,53 +179,45 @@ $(document).ready(function() {
     if (distance >= min && distance <= max) {
       $(".works").addClass("slideUp");
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#workOne").addClass("slideUp");
       }, 500);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#workTwo").addClass("slideUp");
       }, 650);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#workThree").addClass("slideUp");
       }, 800);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#workFour").addClass("slideUp");
       }, 950);
     } else {
-      $(".work").each(function() {
+      $(".work").each(function () {
         $(this).removeClass("slideUp");
       });
     }
   });
 
-  $(".work").each(function() {
+  $(".work").each(function () {
     $(this).hover(
-      function() {
-        $(this)
-          .find(".workOverlay")
-          .addClass("showWorkOverlay");
-        $(this)
-          .find(".workDetail")
-          .addClass("showWorkDetail");
+      function () {
+        $(this).find(".workOverlay").addClass("showWorkOverlay");
+        $(this).find(".workDetail").addClass("showWorkDetail");
       },
-      function() {
-        $(this)
-          .find(".workOverlay")
-          .removeClass("showWorkOverlay");
-        $(this)
-          .find(".workDetail")
-          .removeClass("showWorkDetail");
+      function () {
+        $(this).find(".workOverlay").removeClass("showWorkOverlay");
+        $(this).find(".workDetail").removeClass("showWorkDetail");
       }
     );
   });
 });
 
 //Education Section
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     const max = $(window).height() * 0.3;
     const min = max - $(window).height();
     let distance = $("#edu").offset().top - $(window).scrollTop();
@@ -233,25 +225,25 @@ $(document).ready(function() {
     if (distance >= min && distance <= max) {
       $(".educations").addClass("slideIn");
 
-      setTimeout(function() {
+      setTimeout(function () {
         $("#nmit").addClass("slideIn");
         $("#qtu").addClass("slideIn");
       }, 500);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $(".eduOverlay").addClass("showEduOverlay");
       }, 1000);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $(".eduTime").addClass("showEduDetail");
       }, 1300);
-      setTimeout(function() {
+      setTimeout(function () {
         $(".eduName").addClass("showEduDetail");
       }, 1500);
-      setTimeout(function() {
+      setTimeout(function () {
         $(".eduDegree").addClass("showEduDetail");
       }, 1700);
-      setTimeout(function() {
+      setTimeout(function () {
         $(".eduPlace").addClass("showEduDetail");
       }, 1900);
     } else {
@@ -267,8 +259,8 @@ $(document).ready(function() {
 });
 
 //Experience Section
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     const max = $(window).height() * 0.3;
     const min = max - $(window).height();
     let distance = $("#exp").offset().top - $(window).scrollTop();
@@ -276,51 +268,41 @@ $(document).ready(function() {
     if (distance >= min && distance <= max) {
       $(".experiences").addClass("slideIn");
 
-      setTimeout(function() {
-        $("#ogk").addClass("slideIn");
-        $("#ogk")
-          .find(".companyName")
-          .addClass("slideIn");
-        $("#ogk")
-          .find(".expDetail")
-          .addClass("slideIn");
+      setTimeout(function () {
+        $("#vfh").addClass("slideIn");
+        $("#vfh").find(".companyName").addClass("slideIn");
+        $("#vfh").find(".expDetail").addClass("slideIn");
+
+        $("#uber").addClass("slideIn");
+        $("#uber").find(".companyName").addClass("slideIn");
+        $("#uber").find(".expDetail").addClass("slideIn");
       }, 500);
 
-      setTimeout(function() {
-        $("#yiyang").addClass("slideIn");
-        $("#yiyang")
-          .find(".companyName")
-          .addClass("slideIn");
-        $("#yiyang")
-          .find(".expDetail")
-          .addClass("slideIn");
+      setTimeout(function () {
+        $("#awf").addClass("slideIn");
+        $("#awf").find(".companyName").addClass("slideIn");
+        $("#awf").find(".expDetail").addClass("slideIn");
+
+        $("#eastern").addClass("slideIn");
+        $("#eastern").find(".companyName").addClass("slideIn");
+        $("#eastern").find(".expDetail").addClass("slideIn");
       }, 650);
 
-      setTimeout(function() {
-        $("#awf").addClass("slideIn");
-        $("#awf")
-          .find(".companyName")
-          .addClass("slideIn");
-        $("#awf")
-          .find(".expDetail")
-          .addClass("slideIn");
+      setTimeout(function () {
+        $("#pack").addClass("slideIn");
+        $("#pack").find(".companyName").addClass("slideIn");
+        $("#pack").find(".expDetail").addClass("slideIn");
+
+        $("#yiyang").addClass("slideIn");
+        $("#yiyang").find(".companyName").addClass("slideIn");
+        $("#yiyang").find(".expDetail").addClass("slideIn");
       }, 800);
 
-      setTimeout(function() {
-        $("#ec").addClass("slideIn");
-        $("#ec")
-          .find(".companyName")
-          .addClass("slideIn");
-        $("#ec")
-          .find(".expDetail")
-          .addClass("slideIn");
-      }, 950);
-
-      setTimeout(function() {
+      setTimeout(function () {
         $(".expBottom").addClass("slideIn");
-      }, 1100);
+      }, 950);
     } else {
-      $(".experience").each(function() {
+      $(".experience").each(function () {
         $(this).removeClass("slideIn");
         $(".companyName").removeClass("slideIn");
         $(".expDetail").removeClass("slideIn");
@@ -330,72 +312,72 @@ $(document).ready(function() {
   });
 
   //expModal
-  $(".ogkCircle").click(function() {
+  $(".ogkCircle").click(function () {
     $(".ogkBG").css({ width: "100vw", opacity: "1" });
     $("body").css("overflow-y", "hidden");
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".ogkBG").css("height", "100vh");
     }, 650);
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".modalCompanyName").addClass("showModalText");
       $(".modalExpDetail").addClass("showModalText");
     }, 1200);
   });
 
-  $(".yiyangCircle").click(function() {
+  $(".yiyangCircle").click(function () {
     $(".yiyangBG").css({ width: "100vw", opacity: "1" });
     $("body").css("overflow-y", "hidden");
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".yiyangBG").css("height", "100vh");
     }, 650);
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".modalCompanyName").addClass("showModalText");
       $(".modalExpDetail").addClass("showModalText");
     }, 1200);
   });
 
-  $(".awfCircle").click(function() {
+  $(".awfCircle").click(function () {
     $(".awfBG").css({ width: "100vw", opacity: "1" });
     $("body").css("overflow-y", "hidden");
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".awfBG").css("height", "100vh");
     }, 650);
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".modalCompanyName").addClass("showModalText");
       $(".modalExpDetail").addClass("showModalText");
     }, 1200);
   });
 
-  $(".ecCircle").click(function() {
+  $(".ecCircle").click(function () {
     $(".ecBG").css({ width: "100vw", opacity: "1" });
     $("body").css("overflow-y", "hidden");
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".ecBG").css("height", "100vh");
     }, 650);
 
-    setTimeout(function() {
+    setTimeout(function () {
       $(".modalCompanyName").addClass("showModalText");
       $(".modalExpDetail").addClass("showModalText");
     }, 1200);
   });
 
-  $(".expBG").each(function() {
-    $(this).click(function() {
+  $(".expBG").each(function () {
+    $(this).click(function () {
       $(".modalCompanyName").removeClass("showModalText");
       $(".modalExpDetail").removeClass("showModalText");
 
-      setTimeout(function() {
+      setTimeout(function () {
         $(".expBG").css("width", "3px");
       }, 500);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $(".expBG").css({ height: "2px", opacity: "0" });
         $("body").css("overflow-y", "auto");
       }, 1150);
@@ -404,35 +386,27 @@ $(document).ready(function() {
 });
 
 $(".emailBG").hover(
-  function() {
+  function () {
     $(this).addClass("expand");
-    setTimeout(function() {
-      $(".emailBG")
-        .find(".mediaText")
-        .addClass("showMediaText");
+    setTimeout(function () {
+      $(".emailBG").find(".mediaText").addClass("showMediaText");
     }, 300);
   },
-  function() {
-    $(".emailBG")
-      .find(".mediaText")
-      .removeClass("showMediaText");
+  function () {
+    $(".emailBG").find(".mediaText").removeClass("showMediaText");
     $(".emailBG").removeClass("expand");
   }
 );
 
 $(".phoneBG").hover(
-  function() {
+  function () {
     $(this).addClass("expand");
-    setTimeout(function() {
-      $(".phoneBG")
-        .find(".mediaText")
-        .addClass("showMediaText");
+    setTimeout(function () {
+      $(".phoneBG").find(".mediaText").addClass("showMediaText");
     }, 300);
   },
-  function() {
-    $(".phoneBG")
-      .find(".mediaText")
-      .removeClass("showMediaText");
+  function () {
+    $(".phoneBG").find(".mediaText").removeClass("showMediaText");
     $(".phoneBG").removeClass("expand");
   }
 );
