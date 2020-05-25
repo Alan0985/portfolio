@@ -234,24 +234,28 @@
 
   #exp .experience {
     width: 80vw;
-    height: 40vh;
+    height: 30vh;
     align-self: center;
     margin: 3px 0;
   }
 
+  #exp .experience .titleLocationTime {
+    flex-direction: column;
+  }
   #exp .experience .companyName {
     height: 30%;
     h1 {
       font-size: 16px;
+      margin: 0 5px;
     }
   }
 
-  #exp .experience .expDetail {
+  #exp .experience .titleLocationTime {
     height: 40%;
   }
-  .jobLocation,
-  .jobDescription,
-  .jobDetail {
+
+  #exp .experience .expDetail,
+  #exp .experience .jobDescription {
     display: none;
   }
 
