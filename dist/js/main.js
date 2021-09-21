@@ -135,7 +135,7 @@ $(document).ready(function () {
 
       setTimeout(function () {
         $("#cssSkill").addClass("popUp");
-        $("#rnSkill").addClass("popUp");
+        $("#tsSkill").addClass("popUp");
         $("#psSkill").addClass("popUp");
         $("#muiSkill").addClass("popUp");
         $("#reactSkill").addClass("popUp");
@@ -144,7 +144,7 @@ $(document).ready(function () {
 
       setTimeout(function () {
         $("#bootstrapSkill").addClass("popUp");
-        $("#expressSkill").addClass("popUp");
+        $("#nodeSkill").addClass("popUp");
         $("#awsSkill").addClass("popUp");
         $("#jquerySkill").addClass("popUp");
         $("#reduxSkill").addClass("popUp");
@@ -156,7 +156,7 @@ $(document).ready(function () {
         $("#ajaxSkill").addClass("popUp");
         $("#sassSkill").addClass("popUp");
         $("#mongoSkill").addClass("popUp");
-        $("#nodeSkill").addClass("popUp");
+        $("#expressSkill").addClass("popUp");
         $("#gitSkill").addClass("popUp");
         $("#wordpressSkill").addClass("popUp");
         $("#githubSkill").addClass("popUp");
