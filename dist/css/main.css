@@ -229,12 +229,12 @@ a {
     border: 1px solid #439945; }
   .skill#reduxSkill img {
     border: 1px solid #764abc; }
+  .skill#nextSkill img {
+    border: 1px solid #000; }
   .skill#awsSkill img {
     border: 1px solid #ff9900; }
   .skill#gitSkill img {
     border: 1px solid #f05133; }
-  .skill#pwaSkill img {
-    border: 1px solid #5a0fc8; }
   .skill#mysqlSkill img {
     border: 1px solid #e58805; }
 

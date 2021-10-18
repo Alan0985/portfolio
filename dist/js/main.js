@@ -130,7 +130,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $("#htmlSkill").addClass("popUp");
         $("#jsSkill").addClass("popUp");
-        $("#pwaSkill").addClass("popUp");
+        $("#wordpressSkill").addClass("popUp");
       }, 500);
 
       setTimeout(function () {
@@ -158,7 +158,7 @@ $(document).ready(function () {
         $("#mongoSkill").addClass("popUp");
         $("#expressSkill").addClass("popUp");
         $("#gitSkill").addClass("popUp");
-        $("#wordpressSkill").addClass("popUp");
+        $("#nextSkill").addClass("popUp");
         $("#githubSkill").addClass("popUp");
       }, 950);
     } else {
