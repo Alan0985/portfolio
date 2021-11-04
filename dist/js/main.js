@@ -139,7 +139,7 @@ $(document).ready(function () {
         $("#psSkill").addClass("popUp");
         $("#muiSkill").addClass("popUp");
         $("#reactSkill").addClass("popUp");
-        $("#phpSkill").addClass("popUp");
+        $("#rnSkill").addClass("popUp");
       }, 650);
 
       setTimeout(function () {
@@ -148,11 +148,11 @@ $(document).ready(function () {
         $("#awsSkill").addClass("popUp");
         $("#jquerySkill").addClass("popUp");
         $("#reduxSkill").addClass("popUp");
-        $("#mysqlSkill").addClass("popUp");
+        $("#phpSkill").addClass("popUp");
       }, 800);
 
       setTimeout(function () {
-        $("#webpackSkill").addClass("popUp");
+        $("#mysqlSkill").addClass("popUp");
         $("#ajaxSkill").addClass("popUp");
         $("#sassSkill").addClass("popUp");
         $("#mongoSkill").addClass("popUp");
