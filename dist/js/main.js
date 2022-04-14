@@ -269,19 +269,20 @@ $(document).ready(function () {
       $(".experiences").addClass("slideIn");
 
       setTimeout(function () {
+
+        $("#trb").addClass("slideIn");
+        $("#trb").find(".companyName").addClass("slideIn");
+        $("#trb").find(".expDetail").addClass("slideIn");
+
         $("#vfh").addClass("slideIn");
         $("#vfh").find(".companyName").addClass("slideIn");
         $("#vfh").find(".expDetail").addClass("slideIn");
+      }, 500);
 
+      setTimeout(function () {      
         $("#uber").addClass("slideIn");
         $("#uber").find(".companyName").addClass("slideIn");
         $("#uber").find(".expDetail").addClass("slideIn");
-      }, 500);
-
-      setTimeout(function () {
-        $("#awf").addClass("slideIn");
-        $("#awf").find(".companyName").addClass("slideIn");
-        $("#awf").find(".expDetail").addClass("slideIn");
 
         $("#eastern").addClass("slideIn");
         $("#eastern").find(".companyName").addClass("slideIn");
@@ -289,9 +290,9 @@ $(document).ready(function () {
       }, 650);
 
       setTimeout(function () {
-        $("#pack").addClass("slideIn");
-        $("#pack").find(".companyName").addClass("slideIn");
-        $("#pack").find(".expDetail").addClass("slideIn");
+        $("#awf").addClass("slideIn");
+        $("#awf").find(".companyName").addClass("slideIn");
+        $("#awf").find(".expDetail").addClass("slideIn");
 
         $("#yiyang").addClass("slideIn");
         $("#yiyang").find(".companyName").addClass("slideIn");
