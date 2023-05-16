@@ -6,9 +6,8 @@
   "homepage": "https://github.com/Alan0985/portfolio",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "node-sass": "^6.0.1"
+    "node-sass": "^8.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"

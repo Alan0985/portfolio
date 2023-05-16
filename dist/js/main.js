@@ -152,7 +152,7 @@ $(document).ready(function () {
       }, 800);
 
       setTimeout(function () {
-        $("#mysqlSkill").addClass("popUp");
+        $("#postgresqlSkill").addClass("popUp");
         $("#ajaxSkill").addClass("popUp");
         $("#sassSkill").addClass("popUp");
         $("#mongoSkill").addClass("popUp");
@@ -269,35 +269,24 @@ $(document).ready(function () {
       $(".experiences").addClass("slideIn");
 
       setTimeout(function () {
+        $("#spl").addClass("slideIn");
+        $("#spl").find(".companyName").addClass("slideIn");
+        $("#spl").find(".expDetail").addClass("slideIn");
 
         $("#trb").addClass("slideIn");
         $("#trb").find(".companyName").addClass("slideIn");
         $("#trb").find(".expDetail").addClass("slideIn");
+      }, 500);
 
+      setTimeout(function () {
         $("#vfh").addClass("slideIn");
         $("#vfh").find(".companyName").addClass("slideIn");
         $("#vfh").find(".expDetail").addClass("slideIn");
-      }, 500);
 
-      setTimeout(function () {      
         $("#uber").addClass("slideIn");
         $("#uber").find(".companyName").addClass("slideIn");
         $("#uber").find(".expDetail").addClass("slideIn");
-
-        $("#eastern").addClass("slideIn");
-        $("#eastern").find(".companyName").addClass("slideIn");
-        $("#eastern").find(".expDetail").addClass("slideIn");
       }, 650);
-
-      setTimeout(function () {
-        $("#awf").addClass("slideIn");
-        $("#awf").find(".companyName").addClass("slideIn");
-        $("#awf").find(".expDetail").addClass("slideIn");
-
-        $("#yiyang").addClass("slideIn");
-        $("#yiyang").find(".companyName").addClass("slideIn");
-        $("#yiyang").find(".expDetail").addClass("slideIn");
-      }, 800);
 
       setTimeout(function () {
         $(".expBottom").addClass("slideIn");

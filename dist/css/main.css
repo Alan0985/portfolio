@@ -433,7 +433,7 @@ a {
 
 .experience {
   width: 38vw;
-  height: 27vh;
+  height: 40vh;
   color: #fff;
   margin: 0 5px 10px 5px;
   border-radius: 15px;
@@ -490,12 +490,10 @@ a {
   transform: translateY(0);
   opacity: 1; }
 
+#spl,
 #trb,
 #vfh,
-#uber,
-#eastern,
-#awf,
-#yiyang {
+#uber {
   background-color: #225470; }
 
 #contact {
@@ -546,7 +544,7 @@ a {
   transition: all 0.3s ease-in-out; }
 
 .expand {
-  width: 300px;
+  width: 320px;
   justify-content: left; }
 
 .showMediaText {
@@ -701,7 +699,7 @@ a {
     min-height: 92vh; }
   #exp .experience {
     width: 80vw;
-    height: 30vh;
+    height: 45vh;
     align-self: center;
     margin: 3px 0; }
   #exp .experience .titleLocationTime {
