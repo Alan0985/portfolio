@@ -237,6 +237,8 @@ a {
     border: 1px solid #f05133; }
   .skill#mysqlSkill img {
     border: 1px solid #e58805; }
+  .skill#twSkill img {
+      border: 1px solid #07b6d5; }
 
 #works {
   width: 100vw;

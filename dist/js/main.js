@@ -148,7 +148,7 @@ $(document).ready(function () {
         $("#awsSkill").addClass("popUp");
         $("#jquerySkill").addClass("popUp");
         $("#reduxSkill").addClass("popUp");
-        $("#phpSkill").addClass("popUp");
+        $("#twSkill").addClass("popUp");
       }, 800);
 
       setTimeout(function () {
